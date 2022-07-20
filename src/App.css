@@ -1,0 +1,154 @@
+
+
+
+/* Navbar*/
+.header{
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: #E6E3D3;
+  display: flex;
+  border-color: black;
+  border-bottom: 3px;
+}
+
+section{
+  margin: o auto;
+  max-width: 100%;
+  padding: 2rem;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header .flex .logo{
+      font-size: 2rem;
+      color: var(--black);
+      margin-right: 2rem;
+      text-decoration: none;
+}
+
+.header .flex .navbar a{
+          font-size: 1.3rem;
+          color: var(--black);         
+          margin-left: 2rem;
+}
+
+.header .flex .navbar a:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.header .flex .icons {
+  margin-left: 50px;
+}
+
+.header .flex .icons > *{
+          font-size: 1.5rem;
+          color: var(--black);
+          cursor: pointer;
+          text-decoration: none;
+          
+          
+}
+
+.header .flex .icons > *:hover{
+          color: white;
+}
+
+.header .flex .icons span{
+      font-size: 2rem;
+}
+
+#menu-btn{
+  display: none;
+
+}
+
+
+
+/* Card */
+.card{
+  transition: all 0.5s ease;
+}
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Product */
+.product img {
+  transition: all 0.5s ease;
+}
+.product img:hover{
+  transform: scale(0.1);
+}
+
+
+
+
+  @media screen and (max-width: 580px){
+    .options{
+      display: none;
+    }
+
+
+ /* Media queries */
+ @media (max-width:991px) {
+    
+  html{
+      font-size: 55%;
+  }
+}
+
+@media (max-width:768px){
+  .header{
+          position: relative;
+  }
+  #menu-btn{
+       position: absolute;
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 8px;
+      color: black;
+}
+.header .flex .navbar{
+  position: absolute;
+  top: 99%; left: 0; right: 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  border-width: .4rem;
+  background-color: var(--white);
+  transition: .2s linear;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.header .flex .navbar a{
+  display: block;
+  margin: 2 rem;
+}
+
+.header .flex .navbar.active{
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          padding: 0 15px;
+            text-decoration: none;
+            color:#403F3B;
+        }
+}
+
+@media (max-width:450px) {
+  html{
+      font-size: 50%;
+  }
+  
+  .header .flex .logo{
+      font-size: 1.7rem;
+  }
+}
+  }
+
+
+
